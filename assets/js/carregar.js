@@ -12,7 +12,7 @@ window.addEventListener("load", atualizar )
       card.classList.add("col", "s12", "m6", "l4")
 
       card.innerHTML = `
-      <div class="card">
+      <div class="card ${tarefa.concluida ? 'grey' : ''}">
               <div class="card-content">
                 <span class="card-title">${tarefa.nome}</span>
                 <p>${tarefa.descricao}</p>
@@ -22,7 +22,7 @@ window.addEventListener("load", atualizar )
                 <a href="#" class="btn red" onClick="apagar(${tarefa.id})">
                     <i class="material-icons">delete</i>
                   </a>
-                  <a href="#" class="btn green">
+                  <a href="#" class="btn green" onClick="concluir(${tarefa.id})">
                       <i class="material-icons">check</i>
                   </a>
               </div>

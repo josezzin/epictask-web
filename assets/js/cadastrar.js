@@ -8,7 +8,8 @@ document.querySelector("#botao-cadastrar").addEventListener("click", function ()
       id: Date.now(),
       nome: document.querySelector("#nome").value,
       idade: document.querySelector("#idade").value,
-      email: document.querySelector("#email").value
+      email: document.querySelector("#email").value,
+      concluida: true
     }
 
     tarefas.push(tarefa)
