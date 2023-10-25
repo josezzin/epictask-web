@@ -1,9 +1,7 @@
-document.querySelector("#botao-cadastrar").addEventListener("click", function () {
+document.querySelector("#botao-cadastrar").addEventListener("click",  () => {
 
     let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
-
-    console.log(tarefas)
-
+    
     const tarefa = {
       id: Date.now(),
       nome: document.querySelector("#nome").value,

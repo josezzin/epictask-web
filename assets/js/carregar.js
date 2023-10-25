@@ -15,7 +15,7 @@ window.addEventListener("load", atualizar )
       <div class="card ${tarefa.concluida ? 'grey' : ''}">
               <div class="card-content">
                 <span class="card-title">${tarefa.nome}</span>
-                <p>${tarefa.descricao}</p>
+                <p>${tarefa.email}</p>
                 <span data-badge-caption="anos" class="badge red white-text">${tarefa.idade}</span>
               </div>
               <div class="card-action">
