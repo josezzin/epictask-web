@@ -1,19 +1,20 @@
-document.querySelector("#botao-cadastrar").addEventListener("click",  () => {
+document.querySelector("#botao-cadastrar").addEventListener("click", () => {
 
-    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
-    
-    const tarefa = {
-      id: Date.now(),
-      nome: document.querySelector("#nome").value,
-      idade: document.querySelector("#idade").value,
-      email: document.querySelector("#email").value,
-      concluida: true
-    }
+  let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
 
-    tarefas.push(tarefa)
+  const tarefa = {
+    id: Date.now(),
+    nome: document.querySelector("#nome").value,
+    idade: document.querySelector("#idade").value,
+    email: document.querySelector("#email").value,
+    concluida: false
+  }
 
-    localStorage.setItem("tarefas", JSON.stringify(tarefas))
+  tarefas.push(tarefa)
 
-    window.location.href = "index.html"
+  localStorage.setItem("tarefas", JSON.stringify(tarefas))
 
-  })
+  window.location.href = "index.html"
+  calcularEstatisticas()
+
+})

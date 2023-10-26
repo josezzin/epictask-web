@@ -1,22 +1,24 @@
-window.addEventListener("load", atualizar )
+window.addEventListener("load", atualizar)
 
-  function atualizar(){
-    document.querySelector("#lista-tarefas").innerHTML = ""
-    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
-    tarefas.forEach(tarefa => criarCard(tarefa))
-  }
-  
+function atualizar() {
+  document.querySelector("#lista-tarefas").innerHTML = ""
+  let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
+  tarefas.forEach(tarefa => criarCard(tarefa))
+}
 
-  function criarCard(tarefa){
-      const card = document.createElement("div")
-      card.classList.add("col", "s12", "m6", "l4")
 
-      card.innerHTML = `
+function criarCard(tarefa) {
+  const card = document.createElement("div")
+  card.classList.add("col", "s12", "m6", "l4")
+
+  card.innerHTML = `
       <div class="card ${tarefa.concluida ? 'grey' : ''}">
               <div class="card-content">
                 <span class="card-title">${tarefa.nome}</span>
                 <p>${tarefa.email}</p>
-                <span data-badge-caption="anos" class="badge red white-text">${tarefa.idade}</span>
+                <span data-badge-caption="anos" class="badge red white-text">
+                       ${tarefa.idade}
+                </span>
               </div>
               <div class="card-action">
                 <a href="#" class="btn red" onClick="apagar(${tarefa.id})">
@@ -29,9 +31,9 @@ window.addEventListener("load", atualizar )
             </div>
       `
 
-      
 
-            document.querySelector("#lista-tarefas").appendChild(card)
 
-  }
+  document.querySelector("#lista-tarefas").appendChild(card)
+
+}
 

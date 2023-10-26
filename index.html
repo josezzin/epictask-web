@@ -9,6 +9,7 @@
   <script src="./assets/js/carregar.js"></script>
   <script src="./assets/js/apagar.js" defer></script>
   <script src="./assets/js/concluir.js" defer></script>
+  <script src="./assets/js/dashboard.js" defer></script>
   <title>Toy Store</title>
 </head>
 
@@ -26,6 +27,33 @@
   </nav>
 
   <main class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card-panel center black pink-text">
+          <h3 id="qtde-pendente">0</h3>
+          <span>tarefas pendentes</span>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="card-panel center brown pink-text">
+          <h3 id="qtde-concluida">0</h3>
+          <span>tarefas concluidas</span>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="card-panel center pink black-text">
+          <h3 id="total-pontos">0</h3>
+          <span>total de pontos</span>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="card-panel center dark purple black-text">
+          <h3 id="meus-pontos">0</h3>
+          <span>meus pontos</span>
+        </div>
+      </div>
+    </div>
+
     <h4>Dados</h4>
 
     <div class="row" id="lista-tarefas">
@@ -43,5 +71,3 @@
 </body>
 
 </html>
-
-
